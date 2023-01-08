@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "zip": "tsc && 7z a -r function.zip ./dist/*  node_modules/",
-    "sendToLambda": "npm run zip && aws s3 cp function.zip s3://chrome-aws && aws lambda update-function-code --function-name puppeteer-on-lambda --s3-bucket chrome-aws --s3-key function.zip && rm function.zip"
+    "sendToLambda": "npm run zip && aws s3 cp function.zip s3://lazada-puppeteer-on-lambda && aws lambda update-function-code --function-name lazada-crawler-function --s3-bucket lazada-puppeteer-on-lambda --s3-key function.zip && rm function.zip"
   },
   "author": "Jordan Hansen",
   "license": "ISC",
